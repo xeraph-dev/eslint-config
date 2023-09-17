@@ -1,6 +1,6 @@
 {
   "name": "@xeraph-dev/eslint-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An opinionated eslint config",
   "license": "MIT",
   "author": {
@@ -23,30 +23,46 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "lint": "prettier --write index.cjs",
+    "lint": "eslint index.cjs --fix",
     "change": "changeset",
     "release": "changeset publish",
     "version": "changeset version"
   },
   "prettier": "@xeraph-dev/prettier-config",
-  "dependencies": {},
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-plugin-astro": "^0.29.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sort-destructure-keys": "^1.5.0",
+    "eslint-plugin-typescript-sort-keys": "^3.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
     "@xeraph-dev/prettier-config": "^0.0.5",
     "husky": "^8.0.0"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "astro": ">=2",
+    "prettier": ">=3",
+    "typescript": ">=4"
+  },
   "peerDependenciesMeta": {
     "astro": {
       "optional": true
     },
-    "postcss": {
+    "prettier": {
       "optional": true
     },
-    "prisma": {
-      "optional": true
-    },
-    "tailwind": {
+    "typescript": {
       "optional": true
     }
   }
