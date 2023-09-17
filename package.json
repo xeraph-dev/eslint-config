@@ -1,0 +1,53 @@
+{
+  "name": "@xeraph-dev/eslint-config",
+  "version": "0.0.2",
+  "description": "An opinionated eslint config",
+  "license": "MIT",
+  "author": {
+    "url": "https://xeraph.dev",
+    "name": "Xeraph"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xeraph-dev/eslint-config"
+  },
+  "homepage": "https://github.com/xeraph-dev/eslint-config",
+  "bugs": "https://github.com/xeraph-dev/eslint-config/issues",
+  "exports": {
+    ".": "./index.cjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "./index.cjs",
+    "./package.json"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "prettier --write index.cjs",
+    "change": "changeset",
+    "publish": "changeset publish",
+    "version": "changeset version"
+  },
+  "prettier": "@xeraph-dev/prettier-config",
+  "dependencies": {},
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@xeraph-dev/prettier-config": "^0.0.5",
+    "husky": "^8.0.0"
+  },
+  "peerDependencies": {},
+  "peerDependenciesMeta": {
+    "astro": {
+      "optional": true
+    },
+    "postcss": {
+      "optional": true
+    },
+    "prisma": {
+      "optional": true
+    },
+    "tailwind": {
+      "optional": true
+    }
+  }
+}
